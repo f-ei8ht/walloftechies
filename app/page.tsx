@@ -1,4 +1,5 @@
 import { QuoteCard } from "@/components/text/quote-card"
+import { SuggestQuoteModal } from "@/components/folder/suggest-quote-modal"
 import quotes from "@/data/quotes.json"
 
 export default function Page() {
@@ -23,6 +24,8 @@ export default function Page() {
           </div>
         ))}
       </div>
+
+      <SuggestQuoteModal />
     </main>
   )
 }
