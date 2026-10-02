@@ -2,10 +2,9 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import { X } from "lucide-react";
+import { RiAddLine, RiCloseLine } from "@remixicon/react";
 
-import { NewsletterForm } from "@/components/forms/newsletter-form";
-import { OpensourceFolderTabCard } from "@/components/folder/opensource-folder-tab-card";
+import { SuggestQuoteForm } from "@/components/forms/suggest-quote-form";
 
 export function SuggestQuoteModal() {
   const [open, setOpen] = useState(false);
@@ -36,15 +35,10 @@ export function SuggestQuoteModal() {
         aria-haspopup="dialog"
         aria-expanded={open}
         onClick={openModal}
-        className="fixed right-6 bottom-6 z-50 hidden cursor-pointer rounded-[3rem] outline-none focus:outline-none md:block"
+        aria-label="Suggest a quote"
+        className="fixed right-6 bottom-6 z-50 flex size-14 cursor-pointer items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg transition-colors outline-none hover:bg-primary/80 focus:outline-none focus-visible:ring-3 focus-visible:ring-ring/50"
       >
-        <OpensourceFolderTabCard
-          size="sm"
-          className="cursor-pointer"
-          appName="Wall of Techies"
-          imageSrc="/folder.jpg"
-          imageAlt="Card preview"
-        />
+        <RiAddLine size={24} aria-hidden />
       </button>
 
       {open ? (
@@ -63,12 +57,12 @@ export function SuggestQuoteModal() {
             className="relative z-10 w-full max-w-md outline-none"
           >
             <div className="relative">
-              <NewsletterForm
+              <SuggestQuoteForm
                 title="Add a thought to the wall"
-                subtitle="Know a quote worth pinning? Leave your email and we'll review your suggestion."
-                submitLabel="Send suggestion"
+                subtitle="Know a quote that deserves a spot on the wall? Drop it below."
+                submitLabel="Pin it to the wall"
                 successMessage="Thanks — we'll get back to you if it makes the wall."
-                privacyNote="We'll only reach out about your submission."
+                privacyNote=""
                 onSubmit={async (values) => {
                   // TODO: wire this up to your backend / request endpoint.
                   console.log("suggestion request", values)
@@ -80,7 +74,7 @@ export function SuggestQuoteModal() {
                 aria-label="Close"
                 className="absolute top-5 right-5 flex size-8 cursor-pointer items-center justify-center rounded-full bg-muted text-muted-foreground transition-colors hover:text-foreground"
               >
-                <X size={16} aria-hidden />
+                <RiCloseLine size={16} aria-hidden />
               </button>
             </div>
           </div>

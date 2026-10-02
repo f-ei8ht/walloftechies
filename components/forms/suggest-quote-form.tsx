@@ -9,21 +9,26 @@ import {
   type FormEvent,
 } from "react";
 
-import { AlertCircle, Check, ChevronRight, Loader2 } from "lucide-react";
+import {
+  RiArrowRightSLine,
+  RiCheckLine,
+  RiErrorWarningLine,
+  RiLoader4Line,
+} from "@remixicon/react";
 
 import { cn } from "@/lib/cn";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-export type NewsletterFormValues = Readonly<{
+export type SuggestQuoteFormValues = Readonly<{
   email: string;
   quote: string;
   author: string;
 }>;
 
-type NewsletterFormErrors = Partial<Record<keyof NewsletterFormValues, string>>;
+type SuggestQuoteFormErrors = Partial<Record<keyof SuggestQuoteFormValues, string>>;
 
-export type NewsletterFormProps = Readonly<
+export type SuggestQuoteFormProps = Readonly<
   {
     title?: string;
     subtitle?: string;
@@ -32,12 +37,12 @@ export type NewsletterFormProps = Readonly<
     privacyNote?: string;
     submitErrorMessage?: string;
     loading?: boolean;
-    onSubmit?: (values: NewsletterFormValues) => void | Promise<void>;
+    onSubmit?: (values: SuggestQuoteFormValues) => void | Promise<void>;
   } & Omit<ComponentPropsWithoutRef<"form">, "onSubmit">
 >;
 
-function validate(values: NewsletterFormValues): NewsletterFormErrors {
-  const errors: NewsletterFormErrors = {};
+function validate(values: SuggestQuoteFormValues): SuggestQuoteFormErrors {
+  const errors: SuggestQuoteFormErrors = {};
   const email = values.email.trim();
   const quote = values.quote.trim();
   const author = values.author.trim();
@@ -52,8 +57,8 @@ function validate(values: NewsletterFormValues): NewsletterFormErrors {
   return errors;
 }
 
-export const NewsletterForm = forwardRef<HTMLFormElement, NewsletterFormProps>(
-  function NewsletterForm(
+export const SuggestQuoteForm = forwardRef<HTMLFormElement, SuggestQuoteFormProps>(
+  function SuggestQuoteForm(
     {
       className,
       title = "Add a thought to the wall",
@@ -73,7 +78,7 @@ export const NewsletterForm = forwardRef<HTMLFormElement, NewsletterFormProps>(
     const [email, setEmail] = useState("");
     const [quote, setQuote] = useState("");
     const [author, setAuthor] = useState("");
-    const [errors, setErrors] = useState<NewsletterFormErrors>({});
+    const [errors, setErrors] = useState<SuggestQuoteFormErrors>({});
     const [submitError, setSubmitError] = useState("");
     const [submitting, setSubmitting] = useState(false);
     const [success, setSuccess] = useState(false);
@@ -85,7 +90,7 @@ export const NewsletterForm = forwardRef<HTMLFormElement, NewsletterFormProps>(
         event.preventDefault();
         if (busy || success) return;
 
-        const values: NewsletterFormValues = { email, quote, author };
+        const values: SuggestQuoteFormValues = { email, quote, author };
         const nextErrors = validate(values);
         setErrors(nextErrors);
         if (Object.keys(nextErrors).length > 0) return;
@@ -124,7 +129,7 @@ export const NewsletterForm = forwardRef<HTMLFormElement, NewsletterFormProps>(
 
     const inputClass = (hasError: boolean) =>
       cn(
-        "h-11 w-full rounded-md border bg-background px-3.5 text-sm text-foreground ring-0 transition-[border-color,background-color] duration-200 outline-none placeholder:text-muted-foreground focus:ring-0 disabled:cursor-not-allowed disabled:bg-muted",
+        "w-full rounded-md border bg-background px-3.5 py-2.5 text-sm text-foreground ring-0 transition-[border-color,background-color] duration-200 outline-none placeholder:text-muted-foreground focus:ring-0 disabled:cursor-not-allowed disabled:bg-muted",
         hasError
           ? "border-destructive focus:border-destructive"
           : "border-border focus:border-ring",
@@ -133,7 +138,7 @@ export const NewsletterForm = forwardRef<HTMLFormElement, NewsletterFormProps>(
     return (
       <form
         ref={ref}
-        data-slot="newsletter-form"
+        data-slot="suggest-quote-form"
         data-success={success || undefined}
         aria-busy={busy}
         noValidate
@@ -160,7 +165,7 @@ export const NewsletterForm = forwardRef<HTMLFormElement, NewsletterFormProps>(
             aria-live="polite"
             className="flex items-start gap-2 border-l-2 border-emerald-500 bg-emerald-500/10 px-3.5 py-3"
           >
-            <Check
+            <RiCheckLine
               size={16}
               className="mt-0.5 shrink-0 text-emerald-600 dark:text-emerald-400"
               aria-hidden
@@ -171,11 +176,11 @@ export const NewsletterForm = forwardRef<HTMLFormElement, NewsletterFormProps>(
           </div>
         ) : (
           <>
-            <div className="space-y-4">
+            <div className="space-y-5">
               <div>
                 <label
                   htmlFor={`${formId}-email`}
-                  className="mb-1.5 block text-sm font-medium text-foreground"
+                  className="mb-2 block text-sm font-medium text-foreground"
                 >
                   Email
                 </label>
@@ -214,7 +219,7 @@ export const NewsletterForm = forwardRef<HTMLFormElement, NewsletterFormProps>(
               <div>
                 <label
                   htmlFor={`${formId}-quote`}
-                  className="mb-1.5 block text-sm font-medium text-foreground"
+                  className="mb-2 block text-sm font-medium text-foreground"
                 >
                   Quote
                 </label>
@@ -256,7 +261,7 @@ export const NewsletterForm = forwardRef<HTMLFormElement, NewsletterFormProps>(
               <div>
                 <label
                   htmlFor={`${formId}-author`}
-                  className="mb-1.5 block text-sm font-medium text-foreground"
+                  className="mb-2 block text-sm font-medium text-foreground"
                 >
                   Author
                 </label>
@@ -296,7 +301,7 @@ export const NewsletterForm = forwardRef<HTMLFormElement, NewsletterFormProps>(
                 role="alert"
                 className="mt-5 flex items-start gap-2.5 border-l-2 border-destructive bg-destructive/10 px-3 py-2.5 text-sm text-destructive"
               >
-                <AlertCircle size={16} className="mt-0.5 shrink-0" aria-hidden />
+                <RiErrorWarningLine size={16} className="mt-0.5 shrink-0" aria-hidden />
                 <span>{submitError}</span>
               </div>
             ) : null}
@@ -307,15 +312,17 @@ export const NewsletterForm = forwardRef<HTMLFormElement, NewsletterFormProps>(
               className="mt-6 flex h-11 w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-primary px-4 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring disabled:cursor-not-allowed disabled:opacity-60"
             >
               {busy ? (
-                <Loader2 size={16} className="animate-spin" aria-hidden />
+                <RiLoader4Line size={16} className="animate-spin" aria-hidden />
               ) : null}
               {busy ? "Submitting…" : submitLabel}
-              {!busy ? <ChevronRight size={15} aria-hidden /> : null}
+              {!busy ? <RiArrowRightSLine size={15} aria-hidden /> : null}
             </button>
 
-            <p className="mt-4 text-center text-xs text-muted-foreground">
-              {privacyNote}
-            </p>
+            {privacyNote ? (
+              <p className="mt-4 text-center text-xs text-muted-foreground">
+                {privacyNote}
+              </p>
+            ) : null}
           </>
         )}
       </form>
@@ -323,4 +330,4 @@ export const NewsletterForm = forwardRef<HTMLFormElement, NewsletterFormProps>(
   },
 );
 
-NewsletterForm.displayName = "NewsletterForm";
+SuggestQuoteForm.displayName = "SuggestQuoteForm";
