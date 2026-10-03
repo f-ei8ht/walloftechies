@@ -1,0 +1,72 @@
+/* Iridescent text effect — standalone paint plus hover wiring for the wall title.
+   Motion, timing curves and colours match the spec exactly.
+   Pure CSS only — no JavaScript, no external libraries, no dependencies. */
+
+/* Colour tokens — override to re-skin the effect:
+   --ink    main text colour (defaults to currentColor)
+   --ink-2  primary accent
+   --ink-3  secondary accent */
+:root {
+  --ink: currentColor;
+  --ink-2: #FF4FD8;
+  --ink-3: #4FF8FF;
+}
+
+/* Exact standalone effect — works with any word, not just "IRIS".
+   Markup: <div class="fx-iridescent">IRIS</div> */
+.fx-iridescent {
+  font: 600 38px/1.05 "JetBrains Mono", monospace;
+  letter-spacing: .12em;
+  color: transparent;
+  background: conic-gradient(
+      from 20deg,
+      #f7fbff,
+      var(--ink-3),
+      #bba7ff,
+      var(--ink-2),
+      #fff7d6,
+      #f7fbff
+    )
+    50% 50% / 220% 220%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 10px 28px rgba(0, 0, 0, .28);
+  animation: fx-iridescent 4.5s linear infinite;
+}
+
+@keyframes fx-iridescent {
+  to {
+    filter: hue-rotate(360deg);
+    background-position: 120% 50%;
+  }
+}
+
+/* Wall title: the same paint, gated behind hover/focus so the heading keeps
+   its own typography until interacted with. Dark mode only — no effect in
+   light mode. Pure CSS — no JavaScript. */
+.dark .wall-title-btn:hover .fx-wall-paint,
+.dark .wall-title-btn:focus-visible .fx-wall-paint {
+  color: transparent;
+  background: conic-gradient(
+      from 20deg,
+      #f7fbff,
+      var(--ink-3),
+      #bba7ff,
+      var(--ink-2),
+      #fff7d6,
+      #f7fbff
+    )
+    50% 50% / 220% 220%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 10px 28px rgba(0, 0, 0, .28);
+  animation: fx-iridescent 4.5s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fx-iridescent,
+  .dark .wall-title-btn:hover .fx-wall-paint,
+  .dark .wall-title-btn:focus-visible .fx-wall-paint {
+    animation: none;
+  }
+}

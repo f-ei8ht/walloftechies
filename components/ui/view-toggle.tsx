@@ -1,15 +1,18 @@
 "use client";
 
-import { useState } from "react";
 import { cn } from "cn";
 
 export const viewOptions = ["People", "Software"] as const;
 
 export type ViewOption = (typeof viewOptions)[number];
 
-export function ViewToggle() {
-  const [active, setActive] = useState<ViewOption>("People");
-
+export function ViewToggle({
+  active,
+  onChange,
+}: {
+  active: ViewOption | null
+  onChange: (next: ViewOption | null) => void
+}) {
   return (
     <div role="group" aria-label="Filter wall by view" className="flex items-center gap-2">
       {viewOptions.map((view) => (
@@ -17,7 +20,7 @@ export function ViewToggle() {
           key={view}
           type="button"
           aria-pressed={active === view}
-          onClick={() => setActive(view)}
+          onClick={() => onChange(active === view ? null : view)}
           className={cn(
             "cursor-pointer rounded-full px-4 py-1.5 text-sm font-medium transition-colors outline-none",
             "focus-visible:ring-3 focus-visible:ring-ring/50",
@@ -30,5 +33,5 @@ export function ViewToggle() {
         </button>
       ))}
     </div>
-  );
+  )
 }

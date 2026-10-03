@@ -1,6 +1,7 @@
 import { Geist_Mono, Inter, Libre_Baskerville } from "next/font/google"
 
 import "./globals.css"
+import "./fx-iridescent.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils";
 

@@ -1,17 +1,40 @@
+"use client"
+
+import { useState } from "react"
 import { QuoteCard } from "@/components/text/quote-card"
 import { SuggestQuoteModal } from "@/components/folder/suggest-quote-modal"
-import { ViewToggle } from "@/components/ui/view-toggle"
+import { ViewToggle, type ViewOption } from "@/components/ui/view-toggle"
+import { cn } from "@/lib/utils"
 import quotes from "@/data/quotes.json"
 
 export default function Page() {
+  // null = quotes wall (home). Clicking the active filter again clears it.
+  const [activeView, setActiveView] = useState<ViewOption | null>(null)
+
+  const goToWall = () => {
+    if (activeView === null) return // already on the wall — don't fire
+    setActiveView(null)
+  }
+
   return (
     <main className="mx-auto w-full max-w-7xl px-6 py-16 sm:py-24">
       <div className="mb-12 flex items-end justify-between gap-6">
-        <h1 className="font-heading text-5xl leading-none font-semibold tracking-tight lowercase whitespace-nowrap [text-box:trim-both_text_alphabetic] sm:text-6xl md:text-7xl">
-          wall of techies
+        <h1 className="whitespace-nowrap">
+          <button
+            type="button"
+            onClick={goToWall}
+            aria-label="Back to quotes wall"
+            aria-disabled={activeView === null}
+            className={cn(
+              "wall-title-btn cursor-pointer font-heading text-5xl leading-none font-semibold tracking-tight lowercase [text-box:trim-both_text_alphabetic] outline-none sm:text-6xl md:text-7xl",
+              "focus-visible:ring-2 focus-visible:ring-ring/50",
+            )}
+          >
+            <span className="fx-wall-paint inline-block">wall of techies</span>
+          </button>
         </h1>
         <div className="shrink-0">
-          <ViewToggle />
+          <ViewToggle active={activeView} onChange={setActiveView} />
         </div>
       </div>
 
