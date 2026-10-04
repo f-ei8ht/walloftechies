@@ -41,7 +41,12 @@ export default function Page() {
       <div className="columns-1 gap-6 sm:columns-2 lg:columns-5">
         {quotes.map((q) => (
           <div key={q.id} className="mb-6 break-inside-avoid">
-            <QuoteCard quote={q.quote} author={q.author} featured={q.featured} />
+            <QuoteCard
+              quote={q.quote}
+              author={q.author}
+              featured={q.featured}
+              color={"color" in q ? (q as { color?: string }).color : undefined}
+            />
           </div>
         ))}
       </div>

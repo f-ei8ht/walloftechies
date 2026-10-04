@@ -3,7 +3,9 @@
     "id": 1,
     "quote": "Talk is cheap. Show me the code.",
     "author": "Linus Torvalds",
-    "featured": true
+    "featured": true,
+    "color": "#0492ff",
+    "colorComment": "from Linux Foundation logo"
   },
   {
     "id": 2,
@@ -43,20 +45,20 @@
   },
   {
     "id": 8,
-    "quote": "The most dangerous phrase in the language is: we’ve always done it this way.",
+    "quote": "The most dangerous phrase in the language is: we've always done it this way.",
     "author": "Grace Hopper",
     "featured": false
   },
   {
     "id": 9,
-    "quote": "Design is not just what it looks like and feels like. Design is how it works.",
-    "author": "Steve Jobs",
+    "quote": "There are two ways of constructing a software design: one way is to make it so simple that there are obviously no deficiencies, and the other way is to make it so complicated that there are no obvious deficiencies.",
+    "author": "Tony Hoare",
     "featured": false
   },
   {
     "id": 10,
-    "quote": "I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it.",
-    "author": "Bill Gates",
+    "quote": "I know it doesn't sound like a big effort, but programmers are really, really lazy, and they like to minimize motion.",
+    "author": "Steve Yegge",
     "featured": false
   },
   {
@@ -85,7 +87,7 @@
   },
   {
     "id": 15,
-    "quote": "There’s more than one way to do it.",
+    "quote": "There's more than one way to do it.",
     "author": "Larry Wall",
     "featured": false
   },
@@ -115,13 +117,13 @@
   },
   {
     "id": 20,
-    "quote": "Focus is a matter of deciding what things you’re not going to do.",
+    "quote": "Focus is a matter of deciding what things you're not going to do.",
     "author": "John Carmack",
     "featured": false
   },
   {
     "id": 21,
-    "quote": "If you can’t explain something in simple terms, you don’t understand it.",
+    "quote": "If you can't explain something in simple terms, you don't understand it.",
     "author": "Paul Graham",
     "featured": false
   },
@@ -181,19 +183,19 @@
   },
   {
     "id": 31,
-    "quote": "Never trust a computer you can’t throw out a window.",
+    "quote": "Never trust a computer you can't throw out a window.",
     "author": "Steve Wozniak",
     "featured": false
   },
   {
     "id": 32,
-    "quote": "The best way to get the right answer on the Internet is not to ask a question; it’s to post the wrong answer.",
+    "quote": "The best way to get the right answer on the Internet is not to ask a question; it's to post the wrong answer.",
     "author": "Ward Cunningham",
     "featured": false
   },
   {
     "id": 33,
-    "quote": "Simplicity is not removing complexity, it’s solving it.",
+    "quote": "Simplicity is not removing complexity, it's solving it.",
     "author": "David Heinemeier Hansson",
     "featured": false
   },
@@ -205,7 +207,7 @@
   },
   {
     "id": 35,
-    "quote": "JavaScript is the world’s most misunderstood programming language.",
+    "quote": "JavaScript is the world's most misunderstood programming language.",
     "author": "Douglas Crockford",
     "featured": false
   },
@@ -229,104 +231,104 @@
   },
   {
     "id": 39,
-    "quote": "Innovation is the ability to see change as an opportunity, not a threat.",
-    "author": "Larry Ellison",
+    "quote": "Computer science education cannot make anybody an expert programmer any more than studying brushes and pigment can make somebody an expert painter.",
+    "author": "Eric S. Raymond",
     "featured": false
   },
   {
     "id": 40,
-    "quote": "The internet is the first thing that humanity has built that humanity doesn’t understand.",
-    "author": "Eric Schmidt",
+    "quote": "Before software can be reusable it first has to be usable.",
+    "author": "Ralph Johnson",
     "featured": false
   },
   {
     "id": 41,
-    "quote": "Done is better than perfect.",
-    "author": "Sheryl Sandberg",
+    "quote": "Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the universe trying to produce bigger and better idiots. So far, the universe is winning.",
+    "author": "Rick Cook",
     "featured": false
   },
   {
     "id": 42,
-    "quote": "You can only do so many things great, and you should cast aside everything else.",
-    "author": "Tim Cook",
+    "quote": "The first 90 percent of the code accounts for the first 90 percent of the development time. The remaining 10 percent of the code accounts for the other 90 percent of the development time.",
+    "author": "Tom Cargill",
     "featured": false
   },
   {
     "id": 43,
-    "quote": "Simplicity is not the absence of clutter, it’s the presence of elegance.",
-    "author": "Jony Ive",
+    "quote": "When debugging, novices insert corrective code; experts remove defective code.",
+    "author": "Richard Pattis",
     "featured": false
   },
   {
     "id": 44,
-    "quote": "Culture eats strategy for breakfast.",
-    "author": "Peter Drucker",
+    "quote": "As a programmer, it is your job to put yourself out of business. What you do today can be automated tomorrow.",
+    "author": "Doug McIlroy",
     "featured": false
   },
   {
     "id": 45,
-    "quote": "Without data, you’re just another person with an opinion.",
-    "author": "W. Edwards Deming",
+    "quote": "Code is like humor. When you have to explain it, it's bad.",
+    "author": "Jeff Atwood",
     "featured": false
   },
   {
     "id": 46,
-    "quote": "When something is important enough, you do it even if the odds are not in your favor.",
-    "author": "Elon Musk",
+    "quote": "Programming isn't about what you know; it's about what you can figure out.",
+    "author": "Chris Pine",
     "featured": false
   },
   {
     "id": 47,
-    "quote": "Your brand is what other people say about you when you’re not in the room.",
-    "author": "Jeff Bezos",
+    "quote": "Writing a class without its contract is like producing an engineering component without a spec.",
+    "author": "Bertrand Meyer",
     "featured": false
   },
   {
     "id": 48,
-    "quote": "If you’re not doing some things that are crazy, then you’re doing things wrong.",
-    "author": "Larry Page",
+    "quote": "To iterate is human, to recurse divine.",
+    "author": "L. Peter Deutsch",
     "featured": false
   },
   {
     "id": 49,
-    "quote": "Solving big problems is easier than solving little problems.",
-    "author": "Sergey Brin",
+    "quote": "The trouble with programmers is that you can never tell what a programmer is doing until it's too late.",
+    "author": "Seymour Cray",
     "featured": false
   },
   {
     "id": 50,
-    "quote": "The biggest risk is not taking any risk.",
-    "author": "Mark Zuckerberg",
+    "quote": "The only programs that don't get changed are those that are so bad that nobody wants to use them.",
+    "author": "David Parnas",
     "featured": false
   },
   {
     "id": 51,
-    "quote": "Our industry does not respect tradition — it only respects innovation.",
-    "author": "Satya Nadella",
+    "quote": "Always implement things when you actually need them, never when you just foresee that you need them.",
+    "author": "Ron Jeffries",
     "featured": false
   },
   {
     "id": 52,
-    "quote": "The question is how we use technology to empower.",
-    "author": "Sundar Pichai",
+    "quote": "In some ways, programming is like painting. You start with a blank canvas and certain basic raw materials. You use a combination of science, art, and craft to determine what to do with them.",
+    "author": "Andrew Hunt",
     "featured": false
   },
   {
     "id": 53,
-    "quote": "If you are not embarrassed by the first version of your product, you’ve launched too late.",
-    "author": "Reid Hoffman",
+    "quote": "Fix the cause, not the symptom.",
+    "author": "Steve Maguire",
     "featured": false
   },
   {
     "id": 54,
-    "quote": "The best way to build a company is to start.",
-    "author": "Sam Altman",
+    "quote": "I think there is a world market for maybe five computers.",
+    "author": "John Backus",
     "featured": false
   },
   {
     "id": 55,
-    "quote": "Competition is for losers.",
-    "author": "Peter Thiel",
+    "quote": "Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday's code.",
+    "author": "Dan Salomon",
     "featured": false
   },
   {
@@ -337,20 +339,20 @@
   },
   {
     "id": 57,
-    "quote": "Anyone who has never made a mistake has never tried anything new.",
-    "author": "Albert Einstein",
+    "quote": "The best error message is the one that never shows up.",
+    "author": "Thomas Fuchs",
     "featured": false
   },
   {
     "id": 58,
-    "quote": "The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge.",
-    "author": "Stephen Hawking",
+    "quote": "If the code and comments do not match, possibly both are incorrect.",
+    "author": "Norm Schryer",
     "featured": false
   },
   {
     "id": 59,
-    "quote": "What I cannot create, I do not understand.",
-    "author": "Richard Feynman",
+    "quote": "System programmers are the high priests of a low cult.",
+    "author": "Robert S. Barton",
     "featured": false
   },
   {
@@ -361,13 +363,13 @@
   },
   {
     "id": 61,
-    "quote": "You don’t understand anything until you learn it more than one way.",
+    "quote": "You don't understand anything until you learn it more than one way.",
     "author": "Marvin Minsky",
     "featured": false
   },
   {
     "id": 62,
-    "quote": "You can’t think about thinking without thinking about thinking about something.",
+    "quote": "You can't think about thinking without thinking about thinking about something.",
     "author": "Seymour Papert",
     "featured": false
   },
@@ -391,20 +393,20 @@
   },
   {
     "id": 66,
-    "quote": "Developers, developers, developers!",
-    "author": "Steve Ballmer",
+    "quote": "The cheapest, fastest, and most reliable components are those that aren't there.",
+    "author": "Gordon Bell",
     "featured": false
   },
   {
     "id": 67,
-    "quote": "Ideas are easy. Execution is everything.",
-    "author": "John Doerr",
+    "quote": "Some people, when confronted with a problem, think 'I know, I'll use regular expressions.' Now they have two problems.",
+    "author": "Jamie Zawinski",
     "featured": false
   },
   {
     "id": 68,
-    "quote": "Desire is a contract you make with yourself.",
-    "author": "Naval Ravikant",
+    "quote": "Hardware eventually fails. Software eventually works.",
+    "author": "Michael Hartung",
     "featured": false
   },
   {
@@ -415,13 +417,13 @@
   },
   {
     "id": 70,
-    "quote": "Life is too short to do something that doesn’t matter.",
+    "quote": "Life is too short to do something that doesn't matter.",
     "author": "Drew Houston",
     "featured": false
   },
   {
     "id": 71,
-    "quote": "It’s better to make friends than to make money.",
+    "quote": "It's better to make friends than to make money.",
     "author": "Stewart Butterfield",
     "featured": false
   },
@@ -439,14 +441,14 @@
   },
   {
     "id": 74,
-    "quote": "When you see an opportunity, you have to be willing to bet on yourself.",
-    "author": "Susan Wojcicki",
+    "quote": "Some people are good programmers because they can handle many more details than most people.",
+    "author": "Butler Lampson",
     "featured": false
   },
   {
     "id": 75,
-    "quote": "It’s the process that creates the innovation.",
-    "author": "Michael Dell",
+    "quote": "People tend to overestimate what can be done in one year and to underestimate what can be done in five or ten years.",
+    "author": "J. C. R. Licklider",
     "featured": false
   },
   {
@@ -469,8 +471,8 @@
   },
   {
     "id": 79,
-    "quote": "The hard thing isn’t setting a bold mission. The hard thing is the journey.",
-    "author": "Ben Horowitz",
+    "quote": "Getting information off the Internet is like taking a drink from a fire hydrant.",
+    "author": "Mitch Kapor",
     "featured": false
   },
   {
@@ -511,20 +513,20 @@
   },
   {
     "id": 86,
-    "quote": "If I have seen further, it is by standing on the shoulders of giants.",
-    "author": "Isaac Newton",
+    "quote": "Programming is not about typing, it's about thinking.",
+    "author": "Rich Hickey",
     "featured": false
   },
   {
     "id": 87,
-    "quote": "I have not failed. I’ve just found 10,000 ways that won’t work.",
-    "author": "Thomas Edison",
+    "quote": "In software, the most beautiful code, functions, and programs are sometimes not there at all.",
+    "author": "Jon Bentley",
     "featured": false
   },
   {
     "id": 88,
-    "quote": "The present is theirs; the future, for which I really worked, is mine.",
-    "author": "Nikola Tesla",
+    "quote": "It's easier to ask forgiveness than it is to get permission.",
+    "author": "Grace Hopper",
     "featured": false
   },
   {
@@ -541,62 +543,70 @@
   },
   {
     "id": 91,
-    "quote": "The goal is to turn data into information, and information into insight.",
-    "author": "Carly Fiorina",
+    "quote": "If you love what you do and are willing to do what it takes, it's within your reach.",
+    "author": "Steve Wozniak",
     "featured": false
   },
   {
     "id": 92,
-    "quote": "It doesn’t matter how many times you fail. You only have to be right once.",
-    "author": "Mark Cuban",
+    "quote": "First, solve the problem. Then, write the code.",
+    "author": "John Johnson",
     "featured": false
   },
   {
     "id": 93,
-    "quote": "The only way to win is to learn faster than anyone else.",
-    "author": "Eric Ries",
+    "quote": "Walking on water and developing software from a specification are easy if both are frozen.",
+    "author": "Edward V. Berard",
     "featured": false
   },
   {
     "id": 94,
-    "quote": "There are no facts inside the building, so get the heck outside.",
-    "author": "Steve Blank",
+    "quote": "Solving big problems is easier than solving little problems.",
+    "author": "Sergey Brin",
     "featured": false
   },
   {
     "id": 95,
-    "quote": "Less, but better.",
-    "author": "Dieter Rams",
+    "quote": "Java is to JavaScript what car is to carpet.",
+    "author": "Chris Heilmann",
     "featured": false
   },
   {
     "id": 96,
-    "quote": "Design is the method of putting form and content together.",
-    "author": "Paul Rand",
+    "quote": "C is quirky, flawed, and an enormous success.",
+    "author": "Dennis Ritchie",
     "featured": false
   },
   {
     "id": 97,
-    "quote": "Good design is actually a lot harder to notice than poor design.",
-    "author": "Don Norman",
+    "quote": "When in doubt, use brute force.",
+    "author": "Ken Thompson",
     "featured": false
   },
   {
     "id": 98,
-    "quote": "Users spend most of their time on other sites.",
-    "author": "Jakob Nielsen",
+    "quote": "Don't write better error messages, write code that doesn't need them.",
+    "author": "Jason C. McDonald",
     "featured": false
   },
   {
     "id": 99,
-    "quote": "Above all else show the data.",
-    "author": "Edward Tufte",
+    "quote": "People who are really serious about software should make their own hardware.",
+    "author": "Alan Kay",
     "featured": false
   },
   {
     "id": 100,
-    "quote": "There is no formula. It is human decency, I guess.",
+    "quote": "There is no formula. Human decency I guess.",
     "author": "Kailash Nadh",
+    "featured": true,
+    "color": "#ff8a6d",
+    "colorComment": "from nadh.in website"
+  },
+  {
+    "id": 101,
+    "quote": "It's less Iron Man robots and more Iron Man suits that you want to build.",
+    "author": "Andrej Karpathy",
     "featured": false
   }
 ]
