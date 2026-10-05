@@ -64,8 +64,22 @@ export function SuggestQuoteModal() {
                 successMessage="Thanks — we'll get back to you if it makes the wall."
                 privacyNote=""
                 onSubmit={async (values) => {
-                  // TODO: wire this up to your backend / request endpoint.
-                  console.log("suggestion request", values)
+                  const response = await fetch("/api/suggest", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(values),
+                  });
+                  if (!response.ok) {
+                    let message = "suggestion failed";
+                    try {
+                      const body: { errors?: { message?: string }[] } =
+                        await response.json();
+                      if (body.errors?.[0]?.message) message = body.errors[0].message;
+                    } catch {
+                      // keep fallback message
+                    }
+                    throw new Error(message);
+                  }
                 }}
               />
               <button

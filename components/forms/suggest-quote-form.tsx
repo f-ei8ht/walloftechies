@@ -12,11 +12,11 @@ import {
 import {
   RiArrowRightSLine,
   RiCheckLine,
-  RiErrorWarningLine,
   RiLoader4Line,
 } from "@remixicon/react";
 
 import { cn } from "@/lib/cn";
+import { toast } from "sonner";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -79,7 +79,6 @@ export const SuggestQuoteForm = forwardRef<HTMLFormElement, SuggestQuoteFormProp
     const [quote, setQuote] = useState("");
     const [author, setAuthor] = useState("");
     const [errors, setErrors] = useState<SuggestQuoteFormErrors>({});
-    const [submitError, setSubmitError] = useState("");
     const [submitting, setSubmitting] = useState(false);
     const [success, setSuccess] = useState(false);
 
@@ -96,16 +95,27 @@ export const SuggestQuoteForm = forwardRef<HTMLFormElement, SuggestQuoteFormProp
         if (Object.keys(nextErrors).length > 0) return;
 
         setSubmitting(true);
-        setSubmitError("");
         try {
+          const { isValid: isNonDisposableEmail } = await import("mailchecker");
+          if (!isNonDisposableEmail(email.trim())) {
+            setErrors((prev) => ({
+              ...prev,
+              email: "Disposable email addresses aren't accepted",
+            }));
+            return;
+          }
           await onSubmit?.({
             email: email.trim(),
             quote: quote.trim(),
             author: author.trim(),
           });
           setSuccess(true);
-        } catch {
-          setSubmitError(submitErrorMessage);
+        } catch (error) {
+          const message =
+            error instanceof Error && error.message
+              ? error.message
+              : submitErrorMessage;
+          toast.error(message, { position: "top-center" });
         } finally {
           setSubmitting(false);
         }
@@ -121,7 +131,6 @@ export const SuggestQuoteForm = forwardRef<HTMLFormElement, SuggestQuoteFormProp
         setQuote("");
         setAuthor("");
         setErrors({});
-        setSubmitError("");
         setSuccess(false);
       },
       [onReset],
@@ -198,7 +207,6 @@ export const SuggestQuoteForm = forwardRef<HTMLFormElement, SuggestQuoteFormProp
                   }
                   onChange={(event) => {
                     setEmail(event.target.value);
-                    setSubmitError("");
                     if (errors.email)
                       setErrors((prev) => ({ ...prev, email: undefined }));
                   }}
@@ -234,7 +242,6 @@ export const SuggestQuoteForm = forwardRef<HTMLFormElement, SuggestQuoteFormProp
                   }
                   onChange={(event) => {
                     setQuote(event.target.value);
-                    setSubmitError("");
                     if (errors.quote)
                       setErrors((prev) => ({ ...prev, quote: undefined }));
                   }}
@@ -277,7 +284,6 @@ export const SuggestQuoteForm = forwardRef<HTMLFormElement, SuggestQuoteFormProp
                   }
                   onChange={(event) => {
                     setAuthor(event.target.value);
-                    setSubmitError("");
                     if (errors.author)
                       setErrors((prev) => ({ ...prev, author: undefined }));
                   }}
@@ -295,16 +301,6 @@ export const SuggestQuoteForm = forwardRef<HTMLFormElement, SuggestQuoteFormProp
                 ) : null}
               </div>
             </div>
-
-            {submitError ? (
-              <div
-                role="alert"
-                className="mt-5 flex items-start gap-2.5 border-l-2 border-destructive bg-destructive/10 px-3 py-2.5 text-sm text-destructive"
-              >
-                <RiErrorWarningLine size={16} className="mt-0.5 shrink-0" aria-hidden />
-                <span>{submitError}</span>
-              </div>
-            ) : null}
 
             <button
               type="submit"
