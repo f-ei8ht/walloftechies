@@ -1,0 +1,362 @@
+[
+  {
+    "slug": "charles-babbage",
+    "name": "Charles Babbage",
+    "monogram": "CB",
+    "image": "/babbage.jpg",
+    "role": "Mathematician & inventor",
+    "born": 1791,
+    "died": 1871,
+    "accent": "#b08d57",
+    "knownFor": "For designing the first mechanical computers",
+    "summary": "Babbage grew frustrated with error-prone human calculation and spent decades designing machines that could compute automatically. His Analytical Engine carried the blueprint for every computer that followed.",
+    "contributions": [
+      "Difference Engine — the first automatic mechanical calculator",
+      "Analytical Engine — the first design for a general-purpose computer",
+      "Introduced punched-card input and a separate 'store' and 'mill'",
+      "Worked with Ada Lovelace, who wrote programs for the engine"
+    ],
+    "note": {
+      "header": "note to self",
+      "body": "The engine was never finished, but the idea outlived the brass.",
+      "footer": "— 1871",
+      "color": "#d4f84c",
+      "rotation": 3
+    },
+    "links": [
+      {
+        "label": "Wikipedia",
+        "href": "https://en.wikipedia.org/wiki/Charles_Babbage",
+        "kind": "wikipedia"
+      }
+    ]
+  },
+  {
+    "slug": "ada-lovelace",
+    "name": "Ada Lovelace",
+    "monogram": "AL",
+    "image": "/Ada_Lovelace_portrait_circa_1840.jpg",
+    "role": "Mathematician & writer",
+    "born": 1815,
+    "died": 1852,
+    "accent": "#8b5cf6",
+    "knownFor": "For writing the first computer program",
+    "summary": "Translating a paper on Babbage's Analytical Engine, Lovelace added notes three times longer than the original — including an algorithm for computing Bernoulli numbers, widely regarded as the first published computer program.",
+    "contributions": [
+      "First published algorithm intended for a machine (1843)",
+      "Foresaw that computers could compose music and manipulate symbols",
+      "Called her approach 'poetical science'",
+      "The Ada programming language is named in her honour"
+    ],
+    "note": {
+      "header": "note to self",
+      "body": "The Engine weaves algebraic patterns, just as the Jacquard loom weaves flowers.",
+      "footer": "— 1843",
+      "color": "#ffb3d1",
+      "rotation": -3
+    },
+    "links": [
+      {
+        "label": "Wikipedia",
+        "href": "https://en.wikipedia.org/wiki/Ada_Lovelace",
+        "kind": "wikipedia"
+      }
+    ]
+  },
+  {
+    "slug": "alan-turing",
+    "name": "Alan Turing",
+    "monogram": "AT",
+    "image": "/Alan_Turing_Aged_16.jpg",
+    "role": "Mathematician & cryptanalyst",
+    "born": 1912,
+    "died": 1954,
+    "accent": "#2563eb",
+    "knownFor": "For the Turing machine and breaking Enigma",
+    "summary": "Turing gave computation a mathematical definition before a single electronic computer existed, then used those ideas to help break the German Enigma cipher during World War II.",
+    "contributions": [
+      "The Turing machine — a formal model of computation (1936)",
+      "Solved the Entscheidungsproblem, proving some problems are undecidable",
+      "Led codebreaking work at Bletchley Park",
+      "Proposed the Turing test for machine intelligence (1950)",
+      "Modelled morphogenesis, how patterns form in nature"
+    ],
+    "note": {
+      "header": "note to self",
+      "body": "We can only see a short distance ahead, but we can see plenty there that needs doing.",
+      "footer": "— 1950",
+      "color": "#a5d8ff",
+      "rotation": 4
+    },
+    "links": [
+      {
+        "label": "Wikipedia",
+        "href": "https://en.wikipedia.org/wiki/Alan_Turing",
+        "kind": "wikipedia"
+      }
+    ]
+  },
+  {
+    "slug": "dennis-ritchie",
+    "name": "Dennis Ritchie",
+    "monogram": "DR",
+    "image": "/denis.jpeg",
+    "role": "Computer scientist",
+    "born": 1941,
+    "died": 2011,
+    "accent": "#0ea5e9",
+    "knownFor": "For creating C and co-creating Unix",
+    "summary": "Ritchie designed the C language and, with Ken Thompson, built Unix. Between them they shaped the operating systems, languages and tooling that almost all modern software still rests on.",
+    "contributions": [
+      "Created the C programming language (1972)",
+      "Co-created Unix at Bell Labs with Ken Thompson",
+      "Co-wrote 'The C Programming Language' — the K&R book",
+      "Helped design Plan 9 and the Inferno operating systems",
+      "Received the Turing Award in 1983"
+    ],
+    "note": {
+      "header": "note to self",
+      "body": "C is quirky, flawed, and an enormous success.",
+      "footer": "— K&R",
+      "color": "#fff3bf",
+      "rotation": -4
+    },
+    "links": [
+      {
+        "label": "Wikipedia",
+        "href": "https://en.wikipedia.org/wiki/Dennis_Ritchie",
+        "kind": "wikipedia"
+      }
+    ]
+  },
+  {
+    "slug": "ken-thompson",
+    "name": "Ken Thompson",
+    "monogram": "KT",
+    "image": "/KenThompson20516-1.web_-scaled.jpg",
+    "role": "Computer scientist",
+    "born": 1943,
+    "died": null,
+    "accent": "#6366f1",
+    "knownFor": "For creating Unix and co-creating Go",
+    "summary": "Thompson wrote the first Unix in a few weeks while his wife was away, then spent the next fifty years quietly changing how software is built — from B and grep to UTF-8 and Go.",
+    "contributions": [
+      "Co-created Unix and wrote the first version (1969)",
+      "Created the B language, a direct ancestor of C",
+      "Wrote tools like grep, ed and the original shell",
+      "Co-designed UTF-8 with Rob Pike",
+      "Co-created the Go programming language"
+    ],
+    "note": {
+      "header": "note to self",
+      "body": "You can't trust code that you did not totally create yourself.",
+      "footer": "— 1983",
+      "color": "#b2f2bb",
+      "rotation": 3
+    },
+    "links": [
+      {
+        "label": "Wikipedia",
+        "href": "https://en.wikipedia.org/wiki/Ken_Thompson",
+        "kind": "wikipedia"
+      }
+    ]
+  },
+  {
+    "slug": "bjarne-stroustrup",
+    "name": "Bjarne Stroustrup",
+    "monogram": "BS",
+    "image": "/Bjarne2018.jpg",
+    "role": "Computer scientist",
+    "born": 1950,
+    "died": null,
+    "accent": "#0891b2",
+    "knownFor": "For creating C++",
+    "summary": "Stroustrup wanted the speed of C with the structure of Simula. The result was C++, the language that carried object-oriented programming into systems, games and everything in between.",
+    "contributions": [
+      "Created C++ (originally 'C with Classes', 1979)",
+      "Championed RAII and the zero-overhead principle",
+      "Wrote 'The C++ Programming Language'",
+      "Continues to guide the ISO C++ standard"
+    ],
+    "note": {
+      "header": "note to self",
+      "body": "C makes it easy to shoot yourself in the foot; C++ makes it harder, but when you do, it blows your whole leg off.",
+      "footer": "— 1998",
+      "color": "#99e9f2",
+      "rotation": -3
+    },
+    "links": [
+      {
+        "label": "Website",
+        "href": "https://www.stroustrup.com",
+        "kind": "website"
+      },
+      {
+        "label": "Wikipedia",
+        "href": "https://en.wikipedia.org/wiki/Bjarne_Stroustrup",
+        "kind": "wikipedia"
+      }
+    ]
+  },
+  {
+    "slug": "richard-stallman",
+    "name": "Richard Stallman",
+    "monogram": "RS",
+    "image": "/stallman.jpg",
+    "role": "Programmer & free-software activist",
+    "born": 1953,
+    "died": null,
+    "accent": "#dc2626",
+    "knownFor": "For founding GNU and the Free Software Foundation",
+    "summary": "Stallman launched the GNU Project to build a free operating system, then wrote the GPL to keep it free. His ideas turned software freedom from a slogan into a legal and social movement.",
+    "contributions": [
+      "Founded the GNU Project (1983)",
+      "Wrote the GNU General Public License (GPL)",
+      "Created GNU Emacs and the GNU Compiler Collection",
+      "Founded the Free Software Foundation (1985)",
+      "Defined the four freedoms of free software"
+    ],
+    "note": {
+      "header": "note to self",
+      "body": "Free software is a matter of liberty, not price.",
+      "footer": "— GNU",
+      "color": "#ffd8a8",
+      "rotation": 4
+    },
+    "links": [
+      {
+        "label": "Website",
+        "href": "https://www.stallman.org",
+        "kind": "website"
+      },
+      {
+        "label": "GNU",
+        "href": "https://www.gnu.org",
+        "kind": "website"
+      },
+      {
+        "label": "Wikipedia",
+        "href": "https://en.wikipedia.org/wiki/Richard_Stallman",
+        "kind": "wikipedia"
+      }
+    ]
+  },
+  {
+    "slug": "james-gosling",
+    "name": "James Gosling",
+    "monogram": "JG",
+    "image": "/jamesgosling1617-1web-400x500.jpg",
+    "role": "Computer scientist",
+    "born": 1955,
+    "died": null,
+    "accent": "#ea580c",
+    "knownFor": "For creating Java",
+    "summary": "Gosling led the team that built Java around a radical promise: write once, run anywhere. A decade later the language was running everything from phones to enterprise backends.",
+    "contributions": [
+      "Created the Java programming language and the JVM (1995)",
+      "Lead architect of Sun Microsystems' Java platform",
+      "Built the 'Oak' project that became Java",
+      "Wrote Gosling Emacs"
+    ],
+    "note": {
+      "header": "note to self",
+      "body": "Write once, run anywhere — then debug everywhere.",
+      "footer": "— 1995",
+      "color": "#ffc9c9",
+      "rotation": -4
+    },
+    "links": [
+      {
+        "label": "GitHub",
+        "href": "https://github.com/jamesgosling",
+        "kind": "github"
+      },
+      {
+        "label": "Wikipedia",
+        "href": "https://en.wikipedia.org/wiki/James_Gosling",
+        "kind": "wikipedia"
+      }
+    ]
+  },
+  {
+    "slug": "linus-torvalds",
+    "name": "Linus Torvalds",
+    "monogram": "LT",
+    "image": "/linus.faces22052.web_.jpg",
+    "role": "Software engineer",
+    "born": 1969,
+    "died": null,
+    "accent": "#16a34a",
+    "knownFor": "For creating Linux and Git",
+    "summary": "Torvalds released a hobby kernel in 1991 and let the world build on it. Fourteen years later he wrote Git in a matter of weeks, giving that same world a better way to collaborate.",
+    "contributions": [
+      "Created the Linux kernel (1991) and still maintains it",
+      "Created Git for version control (2005)",
+      "Popularised the open-source, distributed development model",
+      "Received the Millennium Technology Prize (2012)"
+    ],
+    "note": {
+      "header": "note to self",
+      "body": "Talk is cheap. Show me the code.",
+      "footer": "— 2000",
+      "color": "#d4f84c",
+      "rotation": 3
+    },
+    "links": [
+      {
+        "label": "GitHub",
+        "href": "https://github.com/torvalds",
+        "kind": "github"
+      },
+      {
+        "label": "Wikipedia",
+        "href": "https://en.wikipedia.org/wiki/Linus_Torvalds",
+        "kind": "wikipedia"
+      }
+    ]
+  },
+  {
+    "slug": "john-carmack",
+    "name": "John Carmack",
+    "monogram": "JC",
+    "image": "/john.jpeg",
+    "role": "Programmer",
+    "born": 1970,
+    "died": null,
+    "accent": "#7c3aed",
+    "knownFor": "For DOOM, Quake and real-time 3D engines",
+    "summary": "Carmack's id Tech engines made PC games a technical frontier. DOOM and Quake pushed 3D rendering further than the hardware was supposed to allow, and he later turned to virtual reality.",
+    "contributions": [
+      "Built the Doom and Quake engines at id Software",
+      "Pioneered real-time 3D rendering techniques",
+      "Popularised the fast inverse square root",
+      "Released id's engine source under the GPL",
+      "Became CTO of Oculus VR"
+    ],
+    "note": {
+      "header": "note to self",
+      "body": "Story in a game is like a story in a porn movie — it's expected, but not that important.",
+      "footer": "— 1995",
+      "color": "#d0bfff",
+      "rotation": -3
+    },
+    "links": [
+      {
+        "label": "GitHub",
+        "href": "https://github.com/id-Software",
+        "kind": "github"
+      },
+      {
+        "label": "X",
+        "href": "https://x.com/ID_AA_Carmack",
+        "kind": "x"
+      },
+      {
+        "label": "Wikipedia",
+        "href": "https://en.wikipedia.org/wiki/John_Carmack",
+        "kind": "wikipedia"
+      }
+    ]
+  }
+]

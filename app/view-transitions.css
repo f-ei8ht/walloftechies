@@ -1,0 +1,26 @@
+/* View transitions for the wall ↔ People crossfade and the person-portrait morph.
+   The title header stays anchored while the content beneath it animates. */
+
+::view-transition {
+  pointer-events: none;
+}
+
+::view-transition-group(wall-header) {
+  animation: none;
+  z-index: 100;
+}
+::view-transition-old(wall-header) {
+  display: none;
+}
+::view-transition-new(wall-header) {
+  animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(*),
+  ::view-transition-new(*),
+  ::view-transition-group(*) {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+  }
+}
