@@ -3,6 +3,7 @@
     "slug": "git",
     "name": "Git",
     "monogram": "Gt",
+    "image": "/git.svg",
     "role": "Version control",
     "initialRelease": 2005,
     "accent": "#f05032",
@@ -23,6 +24,7 @@
     "slug": "linux",
     "name": "Linux",
     "monogram": "Lx",
+    "image": "/tux.png",
     "role": "Operating system kernel",
     "initialRelease": 1991,
     "accent": "#f5c518",
@@ -40,29 +42,30 @@
     ]
   },
   {
-    "slug": "vs-code",
-    "name": "VS Code",
-    "monogram": "VS",
-    "role": "Code editor",
-    "initialRelease": 2015,
-    "accent": "#007acc",
-    "knownFor": "For being the most loved editor",
-    "summary": "Microsoft's free, extensible code editor. The #1 editor in the Stack Overflow survey for years thanks to extensions and speed.",
+    "slug": "ffmpeg",
+    "name": "FFmpeg",
+    "monogram": "FF",
+    "role": "Multimedia framework",
+    "initialRelease": 2000,
+    "accent": "#2e8b57",
+    "knownFor": "For powering all video on Earth",
+    "summary": "The engine behind nearly all video and audio processing on the planet — inside YouTube, VLC and countless apps.",
     "contributions": [
-      "50k+ extensions marketplace",
-      "Built-in Git, terminal and debugging",
-      "IntelliSense and remote dev",
-      "Free and open source"
+      "Decodes and encodes everything",
+      "Powers YouTube, VLC and more",
+      "Command-line Swiss army knife",
+      "Free and open source (LGPL/GPL)"
     ],
     "links": [
-      { "label": "Website", "href": "https://code.visualstudio.com", "kind": "website" },
-      { "label": "GitHub", "href": "https://github.com/microsoft/vscode", "kind": "github" }
+      { "label": "Website", "href": "https://ffmpeg.org", "kind": "website" },
+      { "label": "Wikipedia", "href": "https://en.wikipedia.org/wiki/FFmpeg", "kind": "wikipedia" }
     ]
   },
   {
     "slug": "docker",
     "name": "Docker",
     "monogram": "Dk",
+    "image": "/docker-mark-ocean-blue.svg",
     "role": "Container platform",
     "initialRelease": 2013,
     "accent": "#2496ed",
@@ -80,29 +83,31 @@
     ]
   },
   {
-    "slug": "python",
-    "name": "Python",
-    "monogram": "Py",
-    "role": "Programming language",
-    "initialRelease": 1991,
-    "accent": "#3776ab",
-    "knownFor": "For AI, scripts and backends",
-    "summary": "Readable, batteries-included language dominating AI, data science, automation and backends. Created by Guido van Rossum.",
+    "slug": "vlc",
+    "name": "VLC Media Player",
+    "monogram": "VL",
+    "image": "/VLC_icon.png",
+    "role": "Media player",
+    "initialRelease": 2001,
+    "accent": "#ff8800",
+    "knownFor": "For playing literally everything",
+    "summary": "The free, open-source media player by VideoLAN that plays any file, disc or stream with no codec packs needed.",
     "contributions": [
-      "Powers AI/ML with PyTorch and TensorFlow",
-      "Django and Flask web frameworks",
-      "Huge stdlib and PyPI ecosystem",
-      "Beginner friendly, pro approved"
+      "Plays every format with no codecs needed",
+      "Free, open source, no ads or spyware",
+      "Runs on every OS and platform",
+      "The traffic-cone icon everyone knows"
     ],
     "links": [
-      { "label": "Website", "href": "https://www.python.org", "kind": "website" },
-      { "label": "Wikipedia", "href": "https://en.wikipedia.org/wiki/Python_(programming_language)", "kind": "wikipedia" }
+      { "label": "Website", "href": "https://www.videolan.org/vlc/", "kind": "website" },
+      { "label": "Wikipedia", "href": "https://en.wikipedia.org/wiki/VLC_media_player", "kind": "wikipedia" }
     ]
   },
   {
     "slug": "postgresql",
     "name": "PostgreSQL",
     "monogram": "PG",
+    "image": "/elephant.png",
     "role": "Database",
     "initialRelease": 1996,
     "accent": "#336791",
@@ -120,43 +125,45 @@
     ]
   },
   {
-    "slug": "node-js",
-    "name": "Node.js",
-    "monogram": "No",
-    "role": "JavaScript runtime",
-    "initialRelease": 2009,
-    "accent": "#339933",
-    "knownFor": "For JavaScript everywhere",
-    "summary": "Runs JavaScript outside the browser with an event-driven, non-blocking runtime. Powers npm, the largest package ecosystem.",
+    "slug": "terraform",
+    "name": "Terraform",
+    "monogram": "Tf",
+    "image": "/terraform.svg",
+    "role": "Infrastructure tool",
+    "initialRelease": 2014,
+    "accent": "#844fba",
+    "knownFor": "For infrastructure as code",
+    "summary": "HashiCorp's tool that lets you define cloud servers, networks and databases as code and provision them with one command.",
     "contributions": [
-      "Event-driven non-blocking I/O",
-      "npm — largest package registry",
-      "Powers Next.js, Express, Nest",
-      "Created by Ryan Dahl in 2009"
+      "Infrastructure as code standard",
+      "One workflow for every cloud",
+      "Plan before you apply, safely",
+      "Huge provider and module registry"
     ],
     "links": [
-      { "label": "Website", "href": "https://nodejs.org", "kind": "website" },
-      { "label": "GitHub", "href": "https://github.com/nodejs/node", "kind": "github" }
+      { "label": "Website", "href": "https://www.terraform.io", "kind": "website" },
+      { "label": "GitHub", "href": "https://github.com/hashicorp/terraform", "kind": "github" }
     ]
   },
   {
-    "slug": "typescript",
-    "name": "TypeScript",
-    "monogram": "TS",
-    "role": "Programming language",
-    "initialRelease": 2012,
-    "accent": "#3178c6",
-    "knownFor": "For typed JavaScript at scale",
-    "summary": "Microsoft's typed superset of JavaScript. Catches bugs early and powers large codebases with world-class tooling.",
+    "slug": "blender",
+    "name": "Blender",
+    "monogram": "Bl",
+    "image": "/blender.png",
+    "role": "3D creation suite",
+    "initialRelease": 1994,
+    "accent": "#265787",
+    "knownFor": "For free Hollywood-grade 3D",
+    "summary": "The free, open-source 3D suite for modeling, animation, VFX and video editing — used by indie artists and film studios alike.",
     "contributions": [
-      "Static types on top of JavaScript",
-      "Best-in-class IDE support",
-      "Powers Next.js, VS Code, Angular",
-      "Created by Anders Hejlsberg"
+      "Full 3D pipeline, free forever",
+      "Used in films and game studios",
+      "Grease Pencil 2D animation",
+      "Huge open-source community"
     ],
     "links": [
-      { "label": "Website", "href": "https://www.typescriptlang.org", "kind": "website" },
-      { "label": "GitHub", "href": "https://github.com/microsoft/TypeScript", "kind": "github" }
+      { "label": "Website", "href": "https://www.blender.org", "kind": "website" },
+      { "label": "Wikipedia", "href": "https://en.wikipedia.org/wiki/Blender_(software)", "kind": "wikipedia" }
     ]
   },
   {

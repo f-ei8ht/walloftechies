@@ -12,6 +12,7 @@ export type Software = Readonly<{
   slug: string
   name: string
   monogram: string
+  image?: string
   role: string
   initialRelease: number
   accent: string

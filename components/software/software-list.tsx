@@ -11,6 +11,7 @@ export function SoftwareList({
         <li key={sw.slug} className="group flex items-center gap-4 py-4">
           <SoftwareMonogram
             sw={sw}
+            transitionName={`software-portrait-${sw.slug}`}
             className="size-11 shrink-0 overflow-hidden border border-border"
           />
 

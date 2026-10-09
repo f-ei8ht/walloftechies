@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { RiBookOpenLine, RiGithubFill, RiGlobalLine, RiLink } from "@remixicon/react"
 
 import type { ResourceLinkItem } from "@/components/resources/resource-links-panel"
@@ -38,22 +39,47 @@ export function softwareResourceItems(sw: Software): ResourceLinkItem[] {
 
 export function SoftwareMonogram({
   sw,
+  large = false,
+  transitionName,
   className,
-}: Readonly<{ sw: Software; className?: string }>) {
+}: Readonly<{
+  sw: Software
+  large?: boolean
+  transitionName?: string
+  className?: string
+}>) {
+  // Vector logos (SVGs) must fit inside the frame, not crop to fill it.
+  const isVector = sw.image?.endsWith(".svg") ?? false
   return (
     <div
       className={cn(
-        "flex size-full items-center justify-center",
+        "relative flex size-full items-center justify-center",
         className,
       )}
-      style={{ backgroundColor: sw.accent }}
+      style={{
+        ...(sw.image ? {} : { backgroundColor: sw.accent }),
+        ...(transitionName ? { viewTransitionName: transitionName } : {}),
+      }}
     >
-      <span
-        aria-hidden
-        className="font-heading text-sm leading-none font-semibold tracking-tight text-white/95 select-none"
-      >
-        {sw.monogram}
-      </span>
+      {sw.image ? (
+        <Image
+          src={sw.image}
+          alt={sw.name}
+          fill
+          sizes={large ? "300px" : "44px"}
+          className={isVector ? (large ? "object-contain p-8" : "object-contain p-1") : "object-cover"}
+        />
+      ) : (
+        <span
+          aria-hidden
+          className={cn(
+            "font-heading leading-none font-semibold tracking-tight text-white/95 select-none",
+            large ? "text-6xl" : "text-sm",
+          )}
+        >
+          {sw.monogram}
+        </span>
+      )}
     </div>
   )
 }

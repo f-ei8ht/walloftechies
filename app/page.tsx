@@ -4,6 +4,9 @@ import { useState } from "react"
 import { QuoteCard } from "@/components/text/quote-card"
 import { SuggestQuoteModal } from "@/components/folder/suggest-quote-modal"
 import { PeopleList } from "@/components/people/people-list"
+import { SoftwareDetail } from "@/components/software/software-detail"
+import { SoftwareList } from "@/components/software/software-list"
+import { getSoftware } from "@/data/software"
 import { PersonDetail } from "@/components/people/person-detail"
 import { ViewToggle, type ViewOption } from "@/components/ui/view-toggle"
 import { getPerson } from "@/data/people"
@@ -31,15 +34,16 @@ export default function Page() {
     })
   }
 
-  const openPerson = (slug: string) => {
+  const openSlugHandler = (slug: string) => {
     runViewTransition(() => setOpenSlug(slug))
   }
 
-  const closePerson = () => {
+  const closeDetail = () => {
     runViewTransition(() => setOpenSlug(null))
   }
 
-  const person = openSlug ? getPerson(openSlug) : undefined
+  const person = activeView === "People" && openSlug ? getPerson(openSlug) : undefined
+  const sw = activeView === "Software" && openSlug ? getSoftware(openSlug) : undefined
 
   return (
     <main className="mx-auto w-full max-w-7xl px-6 py-16 sm:py-24">
@@ -68,9 +72,15 @@ export default function Page() {
 
       {activeView === "People" ? (
         person ? (
-          <PersonDetail person={person} onBack={closePerson} />
+          <PersonDetail person={person} onBack={closeDetail} />
         ) : (
-          <PeopleList onOpen={openPerson} />
+          <PeopleList onOpen={openSlugHandler} />
+        )
+      ) : activeView === "Software" ? (
+        sw ? (
+          <SoftwareDetail sw={sw} onBack={closeDetail} />
+        ) : (
+          <SoftwareList onOpen={openSlugHandler} />
         )
       ) : (
         <div className="columns-1 gap-6 sm:columns-2 lg:columns-5">
