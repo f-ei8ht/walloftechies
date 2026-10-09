@@ -1,0 +1,202 @@
+[
+  {
+    "slug": "git",
+    "name": "Git",
+    "monogram": "Gt",
+    "role": "Version control",
+    "initialRelease": 2005,
+    "accent": "#f05032",
+    "knownFor": "For tracking every change in code",
+    "summary": "Created by Linus Torvalds in 2005, Git is the distributed version control system behind almost all modern software development.",
+    "contributions": [
+      "Distributed branching and merging",
+      "Blazing-fast snapshots and history",
+      "Powers GitHub, GitLab and Bitbucket",
+      "Created by Linus Torvalds in 2005"
+    ],
+    "links": [
+      { "label": "Website", "href": "https://git-scm.com", "kind": "website" },
+      { "label": "Wikipedia", "href": "https://en.wikipedia.org/wiki/Git", "kind": "wikipedia" }
+    ]
+  },
+  {
+    "slug": "linux",
+    "name": "Linux",
+    "monogram": "Lx",
+    "role": "Operating system kernel",
+    "initialRelease": 1991,
+    "accent": "#f5c518",
+    "knownFor": "For running the internet",
+    "summary": "The open-source kernel at the heart of Android, servers, supercomputers and the cloud. Started by Linus Torvalds in 1991.",
+    "contributions": [
+      "Powers 96%+ of top web servers",
+      "Heart of Android and ChromeOS",
+      "Basis for Ubuntu, Debian, Fedora",
+      "Largest open-source project ever"
+    ],
+    "links": [
+      { "label": "Website", "href": "https://www.kernel.org", "kind": "website" },
+      { "label": "Wikipedia", "href": "https://en.wikipedia.org/wiki/Linux_kernel", "kind": "wikipedia" }
+    ]
+  },
+  {
+    "slug": "vs-code",
+    "name": "VS Code",
+    "monogram": "VS",
+    "role": "Code editor",
+    "initialRelease": 2015,
+    "accent": "#007acc",
+    "knownFor": "For being the most loved editor",
+    "summary": "Microsoft's free, extensible code editor. The #1 editor in the Stack Overflow survey for years thanks to extensions and speed.",
+    "contributions": [
+      "50k+ extensions marketplace",
+      "Built-in Git, terminal and debugging",
+      "IntelliSense and remote dev",
+      "Free and open source"
+    ],
+    "links": [
+      { "label": "Website", "href": "https://code.visualstudio.com", "kind": "website" },
+      { "label": "GitHub", "href": "https://github.com/microsoft/vscode", "kind": "github" }
+    ]
+  },
+  {
+    "slug": "docker",
+    "name": "Docker",
+    "monogram": "Dk",
+    "role": "Container platform",
+    "initialRelease": 2013,
+    "accent": "#2496ed",
+    "knownFor": "For shipping apps in containers",
+    "summary": "Package apps and dependencies into portable containers that run anywhere. Standardized how software is built and deployed.",
+    "contributions": [
+      "Containerized app deployment",
+      "Docker Hub image registry",
+      "Compose for multi-container apps",
+      "Foundation for Kubernetes workflows"
+    ],
+    "links": [
+      { "label": "Website", "href": "https://www.docker.com", "kind": "website" },
+      { "label": "Wikipedia", "href": "https://en.wikipedia.org/wiki/Docker_(software)", "kind": "wikipedia" }
+    ]
+  },
+  {
+    "slug": "python",
+    "name": "Python",
+    "monogram": "Py",
+    "role": "Programming language",
+    "initialRelease": 1991,
+    "accent": "#3776ab",
+    "knownFor": "For AI, scripts and backends",
+    "summary": "Readable, batteries-included language dominating AI, data science, automation and backends. Created by Guido van Rossum.",
+    "contributions": [
+      "Powers AI/ML with PyTorch and TensorFlow",
+      "Django and Flask web frameworks",
+      "Huge stdlib and PyPI ecosystem",
+      "Beginner friendly, pro approved"
+    ],
+    "links": [
+      { "label": "Website", "href": "https://www.python.org", "kind": "website" },
+      { "label": "Wikipedia", "href": "https://en.wikipedia.org/wiki/Python_(programming_language)", "kind": "wikipedia" }
+    ]
+  },
+  {
+    "slug": "postgresql",
+    "name": "PostgreSQL",
+    "monogram": "PG",
+    "role": "Database",
+    "initialRelease": 1996,
+    "accent": "#336791",
+    "knownFor": "For being the best database",
+    "summary": "The world's most advanced open-source relational database. Loved for reliability, JSON support and extensions like PostGIS.",
+    "contributions": [
+      "ACID reliability and SQL compliance",
+      "JSONB, arrays and full-text search",
+      "PostGIS geospatial extension",
+      "#1 most admired database (SO survey)"
+    ],
+    "links": [
+      { "label": "Website", "href": "https://www.postgresql.org", "kind": "website" },
+      { "label": "Wikipedia", "href": "https://en.wikipedia.org/wiki/PostgreSQL", "kind": "wikipedia" }
+    ]
+  },
+  {
+    "slug": "node-js",
+    "name": "Node.js",
+    "monogram": "No",
+    "role": "JavaScript runtime",
+    "initialRelease": 2009,
+    "accent": "#339933",
+    "knownFor": "For JavaScript everywhere",
+    "summary": "Runs JavaScript outside the browser with an event-driven, non-blocking runtime. Powers npm, the largest package ecosystem.",
+    "contributions": [
+      "Event-driven non-blocking I/O",
+      "npm — largest package registry",
+      "Powers Next.js, Express, Nest",
+      "Created by Ryan Dahl in 2009"
+    ],
+    "links": [
+      { "label": "Website", "href": "https://nodejs.org", "kind": "website" },
+      { "label": "GitHub", "href": "https://github.com/nodejs/node", "kind": "github" }
+    ]
+  },
+  {
+    "slug": "typescript",
+    "name": "TypeScript",
+    "monogram": "TS",
+    "role": "Programming language",
+    "initialRelease": 2012,
+    "accent": "#3178c6",
+    "knownFor": "For typed JavaScript at scale",
+    "summary": "Microsoft's typed superset of JavaScript. Catches bugs early and powers large codebases with world-class tooling.",
+    "contributions": [
+      "Static types on top of JavaScript",
+      "Best-in-class IDE support",
+      "Powers Next.js, VS Code, Angular",
+      "Created by Anders Hejlsberg"
+    ],
+    "links": [
+      { "label": "Website", "href": "https://www.typescriptlang.org", "kind": "website" },
+      { "label": "GitHub", "href": "https://github.com/microsoft/TypeScript", "kind": "github" }
+    ]
+  },
+  {
+    "slug": "kubernetes",
+    "name": "Kubernetes",
+    "monogram": "K8",
+    "role": "Container orchestrator",
+    "initialRelease": 2014,
+    "accent": "#326ce5",
+    "knownFor": "For running apps at scale",
+    "summary": "Google-born orchestrator that automates deployment, scaling and management of containerized apps. The cloud-native standard.",
+    "contributions": [
+      "Auto-scaling and self-healing",
+      "Declarative deployments",
+      "CNCF graduated project",
+      "Runs on every major cloud"
+    ],
+    "links": [
+      { "label": "Website", "href": "https://kubernetes.io", "kind": "website" },
+      { "label": "GitHub", "href": "https://github.com/kubernetes/kubernetes", "kind": "github" }
+    ]
+  },
+  {
+    "slug": "neovim",
+    "name": "Neovim",
+    "monogram": "Nv",
+    "role": "Code editor",
+    "initialRelease": 2015,
+    "accent": "#57a143",
+    "knownFor": "For modal editing at speed",
+    "summary": "A hyperextensible Vim fork built for speed, Lua plugins and LSP. The terminal editor power users swear by.",
+    "contributions": [
+      "Modal editing, zero mouse needed",
+      "Lua config and plugin ecosystem",
+      "Built-in LSP and Treesitter",
+      "Runs entirely in the terminal"
+    ],
+    "links": [
+      { "label": "Website", "href": "https://neovim.io", "kind": "website" },
+      { "label": "GitHub", "href": "https://github.com/neovim/neovim", "kind": "github" }
+    ]
+  }
+]
