@@ -167,6 +167,7 @@
     "name": "Bjarne Stroustrup",
     "monogram": "BS",
     "image": "/Bjarne2018.jpg",
+    "blackAndWhite": true,
     "role": "Computer scientist",
     "born": 1950,
     "died": null,

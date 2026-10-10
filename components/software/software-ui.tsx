@@ -67,7 +67,8 @@ export function SoftwareMonogram({
           alt={sw.name}
           fill
           sizes={large ? "300px" : "44px"}
-          className={isVector ? (large ? "object-contain p-8" : "object-contain p-1") : "object-cover"}
+          className={isVector ? (large ? "p-8" : "p-1") : ""}
+          style={{ objectFit: isVector ? "contain" : "cover" }}
         />
       ) : (
         <span

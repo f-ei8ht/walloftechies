@@ -31,7 +31,7 @@ export function PersonMonogram({
           alt={person.name}
           fill
           sizes={compact ? "44px" : "300px"}
-          className="object-cover"
+          className={cn("object-cover", person.blackAndWhite && "grayscale")}
         />
       ) : (
         <span

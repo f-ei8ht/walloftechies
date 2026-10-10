@@ -26,6 +26,7 @@ export type Person = Readonly<{
   name: string
   monogram: string
   image?: string
+  blackAndWhite?: boolean
   role: string
   born: number
   died: number | null
