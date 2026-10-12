@@ -58,10 +58,10 @@ export function SuggestQuoteModal() {
           >
             <div className="relative">
               <SuggestQuoteForm
-                title="Add a thought to the wall"
-                subtitle="Know a quote that deserves a spot on the wall? Drop it below."
-                submitLabel="Pin it to the wall"
-                successMessage="Thanks — we'll get back to you if it makes the wall."
+                title="Suggest a quote"
+                subtitle="Know a line worth pinning? Leave it here."
+                submitLabel="Send it"
+                successMessage="Thanks, we read every one."
                 privacyNote=""
                 onSubmit={async (values) => {
                   const response = await fetch("/api/suggest", {

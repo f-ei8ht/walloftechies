@@ -159,27 +159,29 @@ export const SuggestQuoteForm = forwardRef<HTMLFormElement, SuggestQuoteFormProp
         )}
         {...props}
       >
-        <div className="mb-7">
-          <h2 className="font-sans text-2xl font-semibold tracking-tight text-foreground">
-            {title}
-          </h2>
-          <p className="mt-3 max-w-sm text-sm leading-6 text-muted-foreground">
-            {subtitle}
-          </p>
-        </div>
+        {!success && (title || subtitle) ? (
+          <div className="mb-7">
+            <h2 className="font-sans text-2xl font-semibold tracking-tight text-foreground">
+              {title}
+            </h2>
+            <p className="mt-3 max-w-sm text-sm leading-6 text-muted-foreground">
+              {subtitle}
+            </p>
+          </div>
+        ) : null}
 
         {success ? (
           <div
             role="status"
             aria-live="polite"
-            className="flex items-start gap-2 border-l-2 border-emerald-500 bg-emerald-500/10 px-3.5 py-3"
+            className="flex flex-col items-center px-4 py-6 text-center"
           >
             <RiCheckLine
-              size={16}
-              className="mt-0.5 shrink-0 text-emerald-600 dark:text-emerald-400"
+              size={28}
+              className="shrink-0 text-foreground"
               aria-hidden
             />
-            <p className="text-sm text-emerald-600 dark:text-emerald-400">
+            <p className="mt-4 max-w-xs text-sm leading-6 text-muted-foreground">
               {successMessage}
             </p>
           </div>
