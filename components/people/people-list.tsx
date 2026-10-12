@@ -9,7 +9,7 @@ export function PeopleList({
   return (
     <ul className="divide-y divide-border">
       {people.map((person) => (
-        <li key={person.slug} className="group flex items-center gap-4 py-4">
+        <li key={person.slug} className="group flex items-center gap-3 py-4 sm:gap-4">
           <PersonMonogram
             person={person}
             compact

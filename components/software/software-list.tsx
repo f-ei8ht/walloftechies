@@ -8,7 +8,7 @@ export function SoftwareList({
   return (
     <ul className="divide-y divide-border">
       {softwareList.map((sw) => (
-        <li key={sw.slug} className="group flex items-center gap-4 py-4">
+        <li key={sw.slug} className="group flex items-center gap-3 py-4 sm:gap-4">
           <SoftwareMonogram
             sw={sw}
             transitionName={`software-portrait-${sw.slug}`}

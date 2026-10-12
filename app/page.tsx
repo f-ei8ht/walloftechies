@@ -46,19 +46,19 @@ export default function Page() {
   const sw = activeView === "Software" && openSlug ? getSoftware(openSlug) : undefined
 
   return (
-    <main className="mx-auto w-full max-w-7xl px-6 py-16 sm:py-24">
+    <main className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 sm:py-24">
       <div
-        className="mb-12 flex items-end justify-between gap-6"
+        className="mb-10 flex flex-col items-start gap-4 sm:mb-12 sm:flex-row sm:items-end sm:justify-between sm:gap-6"
         style={{ viewTransitionName: "wall-header" }}
       >
-        <h1 className="whitespace-nowrap">
+        <h1 className="max-w-full whitespace-nowrap">
           <button
             type="button"
             onClick={goToWall}
             aria-label="Back to quotes wall"
             aria-disabled={activeView === null}
             className={cn(
-              "wall-title-btn cursor-pointer font-heading text-5xl leading-none font-semibold tracking-tight lowercase [text-box:trim-both_text_alphabetic] outline-none sm:text-6xl md:text-7xl",
+              "wall-title-btn cursor-pointer font-heading text-4xl leading-none font-semibold tracking-tight lowercase [text-box:trim-both_text_alphabetic] outline-none sm:text-6xl md:text-7xl",
               "focus-visible:ring-2 focus-visible:ring-ring/50",
             )}
           >
@@ -83,7 +83,7 @@ export default function Page() {
           <SoftwareList onOpen={openSlugHandler} />
         )
       ) : (
-        <div className="columns-1 gap-6 sm:columns-2 lg:columns-5">
+        <div className="columns-1 gap-6 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5">
           {quotes.map((q) => (
             <div key={q.id} className="mb-6 break-inside-avoid">
               <QuoteCard
