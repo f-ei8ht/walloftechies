@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Geist_Mono, Inter, Libre_Baskerville } from "next/font/google"
 
 import "./globals.css"
@@ -34,6 +36,8 @@ export default function RootLayout({
         <ThemeProvider>
           {children}
           <Toaster position="top-center" richColors />
+          <Analytics />
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
