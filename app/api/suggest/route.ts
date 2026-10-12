@@ -1,7 +1,9 @@
 import { isValid as isNonDisposableEmail } from "mailchecker";
 
-const PAGECLIP_ENDPOINT = "https://api.pageclip.co/data/suggestions";
-const CONTENT_TYPE = "application/vnd.pageclip.v1+json";
+const PAGECLIP_ENDPOINT =
+  "https://api.pageclip.co/data/walloftechies-pintowall";
+const API_VERSION = "application/vnd.pageclip.v1+json";
+const CONTENT_TYPE = "application/json";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -90,7 +92,7 @@ export async function POST(request: Request) {
       method: "PUT",
       headers: {
         Authorization: `Basic ${auth}`,
-        Accept: CONTENT_TYPE,
+        Accept: API_VERSION,
         "Content-Type": CONTENT_TYPE,
       },
       body: JSON.stringify(payload),
